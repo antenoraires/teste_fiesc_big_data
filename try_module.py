@@ -9,7 +9,6 @@ import os
 load_dotenv()
 
 # Acessa as variáveis
-
 access_key = os.getenv("ACESSE_KEY_MINIO")
 secret_key = os.getenv("ACESSE_SECRET_MINIO")
 url_minio = os.getenv("ACESSE_URL_MINIO")
@@ -19,10 +18,10 @@ password_postgres = os.getenv("PASSWORD_POSTGRES")
 
 # Configurações do MinIO
 minio_client = Minio(
-    url_minio,  # Endereço do servidor MinIO atualizado
-    access_key=access_key,  # Substitua pelo seu access key
-    secret_key=secret_key,  # Substitua pelo seu secret key
-    secure=False,  # True se estiver usando HTTPS
+    url_minio,
+    access_key=access_key,
+    secret_key=secret_key,
+    secure=False,
 )
 
 engine = create_engine(
