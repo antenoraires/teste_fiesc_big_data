@@ -34,4 +34,9 @@ Antes de começar, verifique se você possui os seguintes requisitos instalados:
 
 Agora você pode rodar os comandos Python diretamente no ambiente virtual.
 
+Para executar a pipeline basta executar:
+
+    - python try_module.py 
+
+
 

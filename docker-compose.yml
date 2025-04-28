@@ -1,5 +1,15 @@
 version: '3.8'
 services:
+  web:
+    container_name: fiesc_big_data
+    image: fiesc_big_data
+    build:  
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
   minio:
     image: minio/minio
     container_name: minio
