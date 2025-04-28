@@ -177,9 +177,12 @@ class Pipeline:
 
     def load(self, engine, spark):
         db_url = "jdbc:postgresql://localhost:5432/meubanco"
+
+        connection_url = engine.url
+
         properties = {
-            "user": "meuuser",
-            "password": "minhasenha",
+            "user": connection_url.username,
+            "password": connection_url.password,
             "driver": "org.postgresql.Driver"
         }
         path_situacao_notas = "fiesc/gold/situacao_notas_alunos"
@@ -228,16 +231,13 @@ class Pipeline:
             .format("jdbc") \
             .option("url", db_url) \
             .option("dbtable", "matriculas") \
-            .option("user", "meuuser") \
-            .option("password", "minhasenha") \
+            .option("user", connection_url.username) \
+            .option("password", connection_url.password) \
             .option("driver", "org.postgresql.Driver") \
             .mode("overwrite") \
             .save()
-
-        
-
-
-        
+        print("✔️ Dados carregados com sucesso no PostgreSQL.")
+        print(100*"=")
 
 
 
