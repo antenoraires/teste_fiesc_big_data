@@ -1,1 +1,0 @@
-# teste_fiesc_big_data
