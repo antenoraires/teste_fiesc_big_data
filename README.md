@@ -38,5 +38,5 @@ Para executar a pipeline basta executar:
 
     - python try_module.py 
 
-
+ou pode executar o docker
 
