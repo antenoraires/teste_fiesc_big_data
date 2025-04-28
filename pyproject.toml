@@ -22,6 +22,36 @@ pyyaml = "^6.0.2"
 jinja2 = "^3.1.6"
 python-dotenv = "^1.1.0"
 
+[tool.ruff]
+# Seleção de regras
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "W",   # pycodestyle warnings
+    "I",   # isort (import sorting)
+    "C",   # flake8-comprehensions
+    "B",   # flake8-bugbear
+    "UP",  # pyupgrade
+    "YTT", # flake8-2020
+    "ANN", # flake8-annotations
+    "S",   # flake8-bandit (security)
+    "RUF", # Regras específicas do Ruff
+]
+
+# Regras para ignorar
+ignore = ["ANN101", "E501"]
+
+# Configuração específica de plugins
+[tool.ruff.isort]
+known-first-party = ["meuprojeto"]
+
+[tool.ruff.flake8-annotations]
+allow-star-arg-any = true
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F401"]  # Ignora unused imports in __init__.py
+"tests/*.py" = ["S101"]   # Ignora security asserts in tests
+
 
 [build-system]
 requires = ["poetry-core"]
