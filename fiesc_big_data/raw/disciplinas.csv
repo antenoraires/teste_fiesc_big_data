@@ -1,0 +1,27 @@
+﻿CÓDIGO DISC;CÓDIGO CURSO;NOME DA DISCIPLINA;SIGLA;DIA DA SEMANA;CARGA HORÁRIA;AVALIAÇÕES
+101;1;Programação Avançada;PA;0;60;3
+102;1;Redes de Computadores;RC;1;44;2
+103;1;Sistemas Operacionais;SO;2;52;2
+104;1;Banco de Dados;BD;3;56;3
+105;1;Inteligência Artificial;IA;4;80;3
+201;2;Gestão Financeira;GF;0;52;3
+202;2;Marketing Estratégico;ME;1;56;3
+203;2;Economia Empresarial;EE;2;40;3
+204;2;Logística;LG;3;44;
+205;2;Gestão de Projetos;GP;4;60;2
+206;2;Ética Empresarial;EE;5;36;2
+301;3;Estatística Aplicada;EA;0;52;3
+302;3;Mineração de Dados;MD;1;60;2
+303;3;Machine Learning;ML;2;72;2
+304;3;Big Data Analytics;BDA;3;56;
+305;3;Visualização de Dados;VD;4;44;3
+401;4;Mecânica dos Solos;MS;0;56;3
+402;4;Estruturas de Concreto;EC;1;60;2
+403;4;Topografia;TP;2;52;2
+404;4;Projetos de Engenharia;PE;3;64;3
+405;4;Geotecnia;GT;4;56;3
+501;5;Desenho Arquitetônico;DA;0;40;3
+502;5;História da Arquitetura;HA;1;56;2
+503;5;Urbanismo;UR;2;60;2
+504;5;Projeto Arquitetônico;PA;3;72;3
+505;5;Paisagismo;PS;4;52;3

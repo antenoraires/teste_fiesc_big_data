@@ -1,0 +1,32 @@
+general:
+  path_credentials: 'fiesc_big_data/assents/fiesccase.json'
+  name_sheets: "Dados Educacionais Ficticios"
+
+raw:
+  cursos: "fiesc_big_data/raw/cursos.csv"
+  disciplina: "fiesc_big_data/raw/disciplinas.csv"
+  turmas: "fiesc_big_data/raw/turmas.csv"
+
+nativos :
+  matricula_aulas: "fiesc_big_data/dados/matricula_aulas.csv"
+  matricula_disciplinas: "fiesc_big_data/dados/matricula_disciplinas.csv"
+  matriculas_notas: "fiesc_big_data/dados/matricula_notas.csv"
+  turma_avaliacoes: "fiesc_big_data/dados/turma_avaliacoes.csv"
+
+minio: 
+  bucket: "fiesc"
+  camadas:
+    bronze: 
+      sheets: 
+        path: "bronze/sheets/"  # Caminho base
+        cursos_colums: "['id_curso','nome_curso', 'area_conhecimento']"
+        disciplina_colums: "['id_disciplina','id_curso','nome_disciplina','sigla',
+                                'dia_semana','carga_horaria', 'avaliacao']"
+        turmas_colums: "['id_turma','nome_turma','data_inicio','data_fim','codigo_curso']"
+      nativos: "bronze/nativos/" 
+    silver: "silver"
+    gold: "gold"
+
+sql:
+  notas: "fiesc_big_data/sql/situacao_notas_alunos.sql"
+  rule_presenca: "fiesc_big_data/sql/situacao_presenca_alunos.sql"
