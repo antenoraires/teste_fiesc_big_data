@@ -13,6 +13,9 @@ load_dotenv()
 access_key = os.getenv('ACESSE_KEY_MINIO')
 secret_key = os.getenv('ACESSE_SECRET_MINIO')
 url_minio = os.getenv('ACESSE_URL_MINIO')
+user_postgres = os.getenv('USER_POSTGRES')
+password_postgres = os.getenv('PASSWORD_POSTGRES')
+
 
 # Configurações do MinIO
 minio_client = Minio(
@@ -22,7 +25,7 @@ minio_client = Minio(
     secure=False  # True se estiver usando HTTPS
 )
 
-engine = create_engine("postgresql://meuuser:minhasenha@localhost:5432/meubanco")
+engine = create_engine(f"postgresql://{user_postgres}:{password_postgres}@localhost:5432/meubanco")
 
 spark = seccao_pyspark("Fiesc", minio_client)
 
